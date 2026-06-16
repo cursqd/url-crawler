@@ -34,6 +34,12 @@ FILE_RE = re.compile(
     r"|mp3|wav|flac|ogg|m4a|aac|mp4|m4v|webm|avi|mkv|mov|wmv|flv"
     r"|exe|msi|deb|rpm|dmg|pkg|apk|appimage|tar|gz|bz2|xz|rar|7z|tgz"
     r"|csv|tsv|json|xml|yaml|yml|toml|css|js|mjs|map|ts|tsx|jsx|py|sh|bat|ps1|rb|php"
+    r"|exe|dll|sys|drv|ocx|cpl|scr|com|msi|msix|msp|cab|appx|appxbundle|msu"
+    r"|so|dylib|a|lib|o|obj|elf|bin|iso|img|vhd|vhdx|vmdk|ova|ovf"
+    r"|jar|war|ear|class|apk|aab|ipa|xap|app|appimage|snap|flatpak"
+    r"|deb|rpm|dmg|pkg|run|bundle|pyc|pyd|whl|egg|gem|nupkg|crx|xpi"
+    r"|tar|gz|bz2|xz|rar|7z|tgz|tbz2|txz|zst|lz|lzma|arj|ace"
+    r"|csv|tsv|json|xml|yaml|yml|toml|css|js|mjs|map|ts|tsx|jsx|py|sh|bat|cmd|ps1|psm1|vbs|wsf|rb|php"
     r"|woff2?|ttf|otf|eot)$", re.I)
 
 
