@@ -32,14 +32,17 @@ LIB_JS = re.compile(
 FILE_RE = re.compile(
     r".+\.(pdf|zip|jpe?g|gif|webp|png|ico|svg|bmp|tiff?|docx?|xlsx?|pptx?|odt|ods|odp|rtf|txt"
     r"|mp3|wav|flac|ogg|m4a|aac|mp4|m4v|webm|avi|mkv|mov|wmv|flv"
-    r"|exe|msi|deb|rpm|dmg|pkg|apk|appimage|tar|gz|bz2|xz|rar|7z|tgz"
-    r"|csv|tsv|json|xml|yaml|yml|toml|css|js|mjs|map|ts|tsx|jsx|py|sh|bat|ps1|rb|php"
     r"|exe|dll|sys|drv|ocx|cpl|scr|com|msi|msix|msp|cab|appx|appxbundle|msu"
     r"|so|dylib|a|lib|o|obj|elf|bin|iso|img|vhd|vhdx|vmdk|ova|ovf"
     r"|jar|war|ear|class|apk|aab|ipa|xap|app|appimage|snap|flatpak"
     r"|deb|rpm|dmg|pkg|run|bundle|pyc|pyd|whl|egg|gem|nupkg|crx|xpi"
     r"|tar|gz|bz2|xz|rar|7z|tgz|tbz2|txz|zst|lz|lzma|arj|ace"
     r"|csv|tsv|json|xml|yaml|yml|toml|css|js|mjs|map|ts|tsx|jsx|py|sh|bat|cmd|ps1|psm1|vbs|wsf|rb|php"
+    r"|c|h|cc|cpp|cxx|c\+\+|hpp|hxx|hh|ipp|inl|cs|csx|vb|fs|fsx|fsi|java|kt|kts|scala|sc|groovy"
+    r"|go|rs|swift|m|mm|dart|lua|pl|pm|r|jl|ex|exs|erl|hrl|hs|lhs|ml|mli|nim|cr|zig|pas|pp|dpr"
+    r"|f|for|f90|f95|f03|f08|ada|adb|ads|cob|cbl|lisp|lsp|el|scm|ss|rkt|clj|cljs|cljc|tcl|sol|vy"
+    r"|asm|s|sql|graphql|gql|proto|avsc|thrift|gradle|sbt|cmake|mk|tpl|tmpl|mustache|hbs|ejs|pug"
+    r"|twig|jinja|j2|liquid|md|markdown|rst|adoc|asciidoc|tex|ini|conf|cfg|properties|env"
     r"|woff2?|ttf|otf|eot)$", re.I)
 
 
@@ -640,8 +643,8 @@ class urlcrawler:
         return list(out)
 
     def vt(self, d):
-        key = 'api key here'
-        if not key or key == 'key': return []
+        key = 'YOUR_VIRUSTOTAL_API_KEY'
+        if not key or key == 'YOUR_VIRUSTOTAL_API_KEY': return []
         try:
             j = self.s.get(
                 f'https://www.virustotal.com/vtapi/v2/domain/report?apikey={key}&domain={d}',
